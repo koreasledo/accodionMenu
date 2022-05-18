@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    
+    .footerWrapM {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2C2A29;
+    max-height: 1100px;
+    }
+
+    .footerNavM {
+      width: 100%;
+      max-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .accordionM {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: 100%;
+      height: 50px;
+      color:white;
+      background-color: #554c46;
+      border-top: 0.1px solid #443e3b;
+      list-style: none;
+      padding-left: 10px;
+      transition: 0.4s;
+    }
+    .panelM {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      background-color: #645952;
+      color: #e6dbd3;
+    }
+    .panelM li {
+      width: 100%;
+      height: 40px;
+      line-height: 39px;
+      padding-left: 15px;
+    }
+      
+    .activeM, .accordionM:hover {
+      background-color: transparent;
+    }
+    .accordionM:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+      
+    .activeM:after {
+      content: "\2212";
+    }
+
+    .footerInfoM {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 300px;
+    }
+    .footerInfoBox1M {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 80%;
+      height: 30%;
+    }
+
+    .footerInfoNavM {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      flex-wrap: wrap;
+      color: #cccccc;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+    .footerInfoNavListM::after {
+      content: "|";
+      color: rgb(238, 238, 238);
+      margin-left: 13px;
+      margin-right: 13px;
+    }
+    .footerInfoBox2M {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 45%;
+      height: 20%;
+    }
+    .footerInfoButtonM {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 65%;
+      border: 2px solid #ffffff;
+      font-size: 12px;
+      color: #ffffff;
+    }
+    .footerInfoBox3M {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 22%;
+    }
+      .footerInfoCompanyM {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        color: #999999;
+        font-size: 12px;
+      }
+    .footerInfoCompanyList {
+      margin-right: 10px;
+    }
+    .footerInfoBox4M {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 8%;
+    }
+    .footerInfoEndM {
+      font-size: 12px;
+      color: #999999;
+    }
+  </style>
+</head>
+<body>
+  <footer id="footerWrapM" class="footerWrapM">
+    <section id="footerNavM" class="footerNavM">
+        <a class="accordionM">COMPANY</a>
+        <ul class="panelM">
+          <li><a>한눈에 보기</a></li>
+          <li><a>스타벅스 사명</a></li>
+          <li><a>스타벅스 소개</a></li>
+          <li><a>국내 뉴스룸</a></li>
+          <li><a>세계의 스타벅스</a></li>
+          <li><a>글로벌 뉴스룸</a></li>
+        </ul>
+
+        <a class="accordionM">CORPORATE SALES</a>
+        <ul class="panelM">
+          <li><a>단체 및 기업 구매 안내</a></li>
+        </ul>
+
+        <a class="accordionM">PARTNERSHIP</a>
+        <ul class="panelM">
+          <li><a>신규 입점 제의</a></li>
+          <li><a>협력 고객사 등록신청</a></li>
+        </ul>
+
+        <a class="accordionM">ONLINE COMMUNITY</a>
+        <ul class="panelM">
+          <li><a>페이스북</a></li>
+          <li><a>트위터</a></li>
+          <li><a>유튜브</a></li>
+          <li><a>인스타그램</a></li>
+        </ul>
+
+        <a class="accordionM">RECRUIT</a>
+        <ul class="panelM">
+          <li><a>채용 소개</a></li>
+          <li><a>채용 지원하기</a></li>
+        </ul>
+    </section>
+
+    <section class="footerInfoM">
+      <div class="footerInfoBox1M">
+        <ul class="footerInfoNavM">
+          <li class="footerInfoNavListM">개인정보처리방침</li>
+          <li class="footerInfoNavListM">영상정보처리기기 운영관리 방침</li>
+          <li class="footerInfoNavListM">홈페이지 이용약관</li>
+          <li class="footerInfoNavListM">위치정보 이용약관</li>
+          <li class="footerInfoNavListM">스타벅스 카드 이용약관</li>
+          <li class="footerInfoNavListM">My DT Pass 서비스 이용약관</li>
+          <li>윤리경영 핫라인</li>
+        </ul>
+      </div>
+      <div class="footerInfoBox2M">
+        <a class="footerInfoButtonM">HOME</a>
+        <a class="footerInfoButtonM">Sign In</a>
+        <a class="footerInfoButtonM">Join Us</a>
+      </div>
+      <div class="footerInfoBox3M">
+        <ul class="footerInfoCompanyM">
+          <li class="footerInfoCompanyListM">000-00-00000</li>
+          <li class="footerInfoCompanyListM">수강생: 서성경</li>
+          <li class="footerInfoCompanyListM">TEL: 0000-0000</li>
+          <li>책임자: 서성경</li>
+        </ul>
+      </div>
+      <div class="footerInfoBox4M">
+        <span class="footerInfoEndM">ⓒ 2022 Starbucks Coffee Company. All Rights Reserved.</span>
+      </div>
+    </section>
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(".accordionM").click(function() {
+      $(this).next(".panelM").stop().slideToggle(350);
+      $(this).toggleClass('activeM').siblings().removeClass('activeM');
+      $(this).next(".panelM").siblings(".panelM").slideUp(350); // 1개씩 펼치기
+    });
+  </script>
+</body>
+</html>
